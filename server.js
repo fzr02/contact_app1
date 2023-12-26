@@ -13,7 +13,7 @@ const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const flash = require("connect-flash");
 const app = express();
-const port = 3000;
+const port = 3001;
 
 app.set("view engine", "ejs");
 app.use(expressLayouts);
@@ -41,17 +41,17 @@ const sharedData = {
 const renderIndex = (req, res) => {
   const mahasiswa = [
     {
-      nama: "Mochammad Rizky Ramadhani",
-      email: "rizkyramadhani181102@gmail.com",
+      nama: "Muhammad Dzikri",
+      email: "mdzikry3@gmail.com",
     },
     {
-      nama: "Rafael",
-      email: "Rafael29@gmail.com",
+      nama: "Ucup",
+      email: "ucup9@gmail.com",
     },
   ];
 
   res.render("index", {
-    nama: "Mochammad Rizky Ramadhani",
+    nama: "Muhammad Dzikri",
     title: "Halaman Home",
     mahasiswa: mahasiswa,
     ...sharedData,
